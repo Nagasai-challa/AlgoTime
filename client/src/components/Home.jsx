@@ -50,7 +50,7 @@ const Home = () => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await axios.post("http://localhost:5000/", { text });
+      const response = await axios.post("https://algotime.onrender.com", { text });
       if (response.status === 200) {
         const formattedData = formatResponse(response.data);
         console.log(formattedData)
